@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "& 'C:\\Program Files\\nodejs\\node.exe' --watch src/server.js",
+    "start": "& 'C:\\Program Files\\nodejs\\node.exe' src/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.4.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.18.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "software-company-platform",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "overrides": {
+    "postcss": "^8.5.10"
+  },
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "dev": "powershell -Command \"Write-Host 'Run frontend and backend in separate terminals with npm run dev:frontend and npm run dev:backend'\"",
+    "build": "npm run build --workspace frontend",
+    "build:frontend": "npm run build --workspace frontend",
+    "start:frontend": "npm run start --workspace frontend",
+    "start:backend": "npm run start --workspace backend"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "stripe": "^22.1.0"
+  }
+}

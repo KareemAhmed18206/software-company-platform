@@ -1,60 +1,85 @@
 # Software Company Platform
 
-Monorepo scaffold for:
+Enterprise-grade private SaaS platform and company website built with a modern full-stack architecture, secure role-based access, real-time collaboration, payments integration, and AI-powered customer support.
 
-- Marketing website
-- Client dashboard
-- Admin dashboard
-- Project management system
+## Overview
 
-## Apps
+This project combines:
 
-- `frontend`: Next.js + Tailwind CSS
-- `backend`: Node.js + Express + MongoDB
+- A modern marketing website
+- A secure client portal
+- An admin dashboard
+- A project request and management workflow
+- Real-time messaging and notifications
+- Billing and AI support foundations
 
-## Current Modules
+It is designed as a scalable monorepo with clear separation between frontend, backend, domain modules, and shared infrastructure.
 
-- Authentication with JWT and bcrypt
-- Admin and client dashboards
-- Services catalog with admin CRUD
-- Project request workflow
-- Real-time messaging with Socket.io
-- Notifications
+## Tech Stack
+
+- Frontend: `Next.js`, `Tailwind CSS`
+- Backend: `Node.js`, `Express`
+- Database: `MongoDB`
+- Authentication: `JWT`, `bcrypt`
+- Real-time: `Socket.io`
+- Payments: `Stripe`
+- AI: `OpenAI API` with local fallback mode
+
+## Core Features
+
+- Secure authentication with JWT and password hashing
+- Role-based access for `admin` and `client`
+- Responsive marketing website and dashboard shell
+- Services catalog with admin CRUD management
+- Project request workflow with status tracking
+- Real-time client-admin messaging
+- In-app notifications
 - Billing foundation with Stripe checkout endpoints
-- AI support chatbot with OpenAI fallback mode
-- Security baseline with Helmet and rate limiting
+- AI-powered support assistant
+- Security baseline with `helmet`, rate limiting, and request sanitization
 
-## Quick start
+## Project Structure
 
-1. Install dependencies in the workspace root:
+- `frontend`: Next.js application for the public website and dashboards
+- `backend`: Express API with modular business domains
+
+## Getting Started
+
+1. Install dependencies from the workspace root:
    `npm install`
-2. Copy env files:
-   - `frontend/.env.example` to `frontend/.env.local`
-   - `backend/.env.example` to `backend/.env`
-3. Run each app:
+2. Create environment files:
+   - Copy `frontend/.env.example` to `frontend/.env.local`
+   - Copy `backend/.env.example` to `backend/.env`
+3. Run the applications:
    - `npm run dev:frontend`
    - `npm run dev:backend`
 
-## Production Scripts
+## Available Scripts
 
+- `npm run dev:frontend`
+- `npm run dev:backend`
 - `npm run build:frontend`
 - `npm run start:frontend`
 - `npm run start:backend`
 
+## Environment Notes
+
+- Configure MongoDB in `backend/.env`
+- Add Stripe keys before enabling live billing flows
+- Add `OPENAI_API_KEY` for live AI responses
+- Set `ALLOW_ADMIN_SELF_REGISTRATION=false` in production
+
 ## VS Code
 
-You can run the project from VS Code terminals or Tasks:
+Run the project from integrated terminals or VS Code tasks:
 
-- Frontend task: `Frontend: Dev Server`
-- Backend task: `Backend: Dev Server`
-
-## Notes
-
-- The frontend and backend scripts are pinned to the local Windows Node executable so `npm run ...` works reliably from VS Code in this environment.
-- Stripe checkout requires valid Stripe environment variables before live payments can complete.
-- OpenAI chatbot responses use a local fallback mode until `OPENAI_API_KEY` is configured.
-- Set `ALLOW_ADMIN_SELF_REGISTRATION=false` in production.
+- `Frontend: Dev Server`
+- `Backend: Dev Server`
 
 ## Deployment
 
-See [DEPLOYMENT.md](C:/Users/Copy/Documents/Codex/2026-04-25/you-are-a-senior-full-stack/DEPLOYMENT.md).
+Deployment notes and environment guidance are available in [DEPLOYMENT.md](C:/Users/Copy/Documents/Codex/2026-04-25/you-are-a-senior-full-stack/DEPLOYMENT.md).
+
+## Proprietary Notice
+
+This repository is private and proprietary. No part of this software may be copied, modified, distributed, sublicensed, or used without prior written permission from the owner.
